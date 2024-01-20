@@ -1,11 +1,6 @@
 package com.example.lojinha.DTO;
 
 import java.io.Serializable;
-
-import java.util.HashSet;
-
-import java.util.Set;
-
 import com.example.lojinha.entities.Category;
 
 
@@ -46,7 +41,6 @@ import com.example.lojinha.entities.Category;
 	public void setName(String name) {
 		this.name = name;
 	}
-
 
 
 	}

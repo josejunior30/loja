@@ -7,9 +7,6 @@ import java.util.Set;
 import com.example.lojinha.entities.Category;
 import com.example.lojinha.entities.Produto;
 
-
-
-
 public class ProdutoDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
