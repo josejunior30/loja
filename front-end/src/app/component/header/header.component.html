@@ -1,0 +1,51 @@
+<header class="main-header">
+    <h1 class="main-header__title">
+      <span class="main-header__title--blue">ProWay</span> <span class="main-header__title--orange">Computers</span>
+    </h1>
+    <div class="container-menu">
+      <nav class="main-header__menu">
+        <ul>
+          <li><a routerLink="produtos" (click)="voltarProduto()">Produto</a></li>
+
+          <li class="main-header__menu" > 
+            <button mat-button [matMenuTriggerFor]="categorias" >Categorias</button>
+            <mat-menu #categorias="matMenu">
+              <button mat-menu-item (click)="selecionarCategoria(1)">informatica</button>
+              <button mat-menu-item  (click)="selecionarCategoria(2)">Games</button>
+              <button mat-menu-item (click)="selecionarCategoria(3)"> Celular</button>
+            </mat-menu>
+          </li>
+          
+          <li *ngIf="!usuarioLogado">
+            <a routerLink="login">Login</a>
+          </li>
+          <li *ngIf="usuarioLogado" class="logado">
+            <button mat-button [matMenuTriggerFor]="menu">
+              <i class="fa-solid fa-user"></i>
+              {{name}}
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Minha conta</button>
+              <button mat-menu-item (click)="logout()">Sair</button>
+            </mat-menu>
+          </li>
+          <li>
+            <a routerLink="carrinho">
+              <i class="fa-solid fa-cart-shopping"></i>
+              carrinho
+              <span class="badge-carrinho">{{carrinhoService.obterCarrinho().length}}</span>
+            </a>
+          </li>
+          <li></li>
+          <li><a><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a><i class="fa-brands fa-square-instagram"></i></a></li>
+        </ul>
+      </nav>
+      <app-search-bar></app-search-bar>
+      
+    </div>
+  </header>
+
+  
+  

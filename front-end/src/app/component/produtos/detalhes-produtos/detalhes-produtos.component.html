@@ -1,0 +1,25 @@
+<section class="product__container">
+    <div class="product-image__container">
+        <img [src]="produto?.imUrl">
+    </div>
+    <div class="product-description__container">
+        <h2 class="product__name">{{produto?.name}}</h2>
+        <h3 class="product__price">{{produto?.price | currency: "BRL"}}</h3>
+        <p>Estoque disponivel</p>
+        
+     
+    
+        <label>
+            Quantidade: 
+        <mat-button-toggle-group name="quantidade" aria-label="aumentarQuantidade">
+            <mat-button-toggle value="aumentar"(click)="aumentarQuantidade()">+</mat-button-toggle>
+            <input type="number" [(ngModel)]="quantidade" min="1">
+            <mat-button-toggle value="diminuir"(click)="diminuirQuantidade()">-</mat-button-toggle>
+          </mat-button-toggle-group>
+          unidade(s) 
+          </label>
+        <p class="product__avaiability">{{produto?.quantities}} unidade(s) em estoque!</p>
+        <button (click)="adicionarCarrinho()"> <i class="fa-solid fa-cart-shopping"></i>  Adicionar ao carrinho</button>
+        
+    </div>
+</section>

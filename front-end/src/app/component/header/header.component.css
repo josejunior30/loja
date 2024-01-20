@@ -1,0 +1,133 @@
+.main-header {    
+    padding: 10px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+}
+.main-header__title {    
+    font-size: 80px;
+    letter-spacing: -1.5px;    
+}
+.main-header__title--blue {
+    color: var(--blue);
+    color: blue;
+    font-size:60px;
+}
+
+.main-header__title--orange {
+    color: var(--orange);
+    color: orange;
+    font-size:60px;
+}
+.main-header__title {    
+    font-size: 80px;
+    letter-spacing: -1.5px;    
+}
+.container-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    flex: 1;
+}
+.main-header__menu ul {
+    display: flex;
+    justify-content: flex-end;
+        list-style-type: none;
+}
+.main-header__menu ul li {
+    display: flex;
+    justify-content: flex-end;
+        list-style-type: none;
+}
+.main-header__menu a {
+    padding: 10px 10px;
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+.main-header__menu ul li button{
+    padding: 10px 10px;
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.main-header__menu a:hover {
+    background-color: var(--blue);
+    color: #fff;
+}
+.logado button{
+    padding: 10px 10px;
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.search-form{
+    height: 44px;
+    display: flex;
+}
+
+.search-form input{
+    box-sizing: border-box;
+    height: 56px;
+    padding: 28px;
+    flex:1;
+    background-color: var(--light-gray);
+    color: var(--gray);
+    border: none;
+    transition: all -3s ease-in-out;
+    font-size: 22px;
+}
+
+.search-form button{
+    width: 56px;
+    height: 56px;
+    background-color: var(--blue);
+    border:none;
+    color: #fff;
+    font-size: 22px;
+}
+.main-header__menu {
+    position: relative;
+    list-style: none;
+  }
+  
+  .menu-button {
+    cursor: pointer;
+  }
+  
+  .categorias-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .categorias-menu li {
+    padding: 10px;
+  }
+  
+  .categorias-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+  
+  .categorias-menu li:hover {
+    background-color: #f0f0f0;
+  }
+  

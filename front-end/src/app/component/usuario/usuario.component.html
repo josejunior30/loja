@@ -1,0 +1,62 @@
+<h2 class="contact__title">Cadastrar</h2>
+<section class="contact__container">
+    <form class="contact-form" [formGroup]="formContato" (ngSubmit)="enviarFormulario()">
+    <input type="name" [(ngModel)]="usuarios.name"
+    placeholder="Digite o seu nome"
+    formControlName="nome"
+    [class.valid]="formContato.controls['nome'].valid" 
+    [class.invalid]="formContato.controls['nome'].invalid && 
+    (formContato.controls['nome'].touched || formContato.controls['nome'].dirty)">
+
+<div *ngIf="formContato.controls['nome'].invalid && 
+    (formContato.controls['nome'].touched || formContato.controls['nome'].dirty)">
+   
+    <small class="error-message" *ngIf=" formContato.controls['nome'].hasError('minlength')">
+     Esse campo precisa ter no minimo 3 letras
+    </small>
+    <small class="error-message" *ngIf=" formContato.controls['nome'].hasError('required')">
+     Esse campo precisa ser preenchido.
+    </small>  
+</div>
+
+   
+        <input type="email" [(ngModel)]="usuarios.login"
+        placeholder="Digite o seu e-mail"
+        formControlName="email"
+        [class.valid]="formContato.controls['email'].valid" 
+        [class.invalid]="formContato.controls['email'].invalid && 
+        (formContato.controls['email'].touched || formContato.controls['email'].dirty)">
+         
+    <div *ngIf="formContato.controls['email'].invalid && 
+        (formContato.controls['email'].touched || formContato.controls['email'].dirty)">
+       
+        <small class="error-message" *ngIf=" formContato.controls['email'].hasError('email')">
+         Esse campo precisa ser um e-mail válido
+        </small>
+        <small class="error-message" *ngIf=" formContato.controls['email'].hasError('required')">
+         Esse campo precisa ser preenchido.
+        </small>  
+   </div>
+   
+   <input type="password" [(ngModel)]="usuarios.password" 
+   placeholder="Digite o sua senha"
+   formControlName="senha"
+   [class.valid]="formContato.controls['senha'].valid" 
+   [class.invalid]="formContato.controls['senha'].invalid && 
+   (formContato.controls['senha'].touched || formContato.controls['senha'].dirty)">
+   
+   <div *ngIf="formContato.controls['senha'].invalid && 
+        (formContato.controls['senha'].touched || formContato.controls['senha'].dirty)">
+       
+        <small class="error-message" *ngIf=" formContato.controls['senha'].hasError('minlength')">
+         Esse campo precisa ser no minimo 5 letras
+        </small>
+        <small class="error-message" *ngIf=" formContato.controls['senha'].hasError('required')">
+         Esse campo precisa ser preenchido.
+        </small>  
+   </div>
+        <button [disabled]="formContato.invalid" type="submit" (click)="criarNovoUsuario()" >Cadastrar</button>
+    </form>
+  
+</section>
+
