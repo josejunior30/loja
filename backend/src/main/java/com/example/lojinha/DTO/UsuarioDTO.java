@@ -6,12 +6,23 @@ import java.util.Objects;
 import com.example.lojinha.entities.UserRole;
 import com.example.lojinha.entities.Usuario;
 
+import jakarta.validation.constraints.Email;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
 public class UsuarioDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
+	
+	@Size(min=3, max=30,message= "o nome deve ter entre 3 e 30 caracteres")
 	private String name;
+	@NotBlank(message="Digite um email")
+	@Email(message="Necessita ser um email válido")
 	private String login;
+	@Pattern(regexp = "^(?=.*\\d).{4,8}$", message="A senha deve ter entre 4 e 8 caracteres e um valor numerico")
 	private String password;
 	private UserRole role;
 	
