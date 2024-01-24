@@ -35,13 +35,13 @@
         <small class="error-message" *ngIf=" formContato.controls['senha'].hasError('required')">
          Esse campo precisa ser preenchido.
         </small>  
+      
    </div>
         <button [disabled]="formContato.invalid" type="submit" (click)="doLogin()">Entrar</button>
-        <a href="#">Esqueci a senha</a>
+        <div class="opcao">
+            <p> <a href="#">Esqueci a senha</a></p>
+            <p>É novo por aqui ? <a routerLink="cadastrar">Cadastrar</a></p>
+        </div>
     </form>
-    <div>
-        <p>É novo por aqui ? <a routerLink="cadastrar">Cadastrar</a></p>
-    </div>
-  
 </section>
 

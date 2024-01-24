@@ -100,34 +100,18 @@
     position: relative;
     list-style: none;
   }
+ 
+ .menu__categorias:hover{
+    background-color: var(--blue);
+    
+ }
+  
+.main-header__menu ul li button:hover{
+    color: #fff;
+    background-color: var(--blue);
+}
   
   .menu-button {
     cursor: pointer;
   }
-  
-  .categorias-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .categorias-menu li {
-    padding: 10px;
-  }
-  
-  .categorias-menu li a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-  }
-  
-  .categorias-menu li:hover {
-    background-color: #f0f0f0;
-  }
-  
+ 
